@@ -1,0 +1,68 @@
+body {
+    background-color: aliceblue;
+    animation: 10s linear infinite bgColor;
+    animation-delay: 0s;
+}
+@keyframes bgColor {
+    from {background-image: linear-gradient(to top, #dd8fa9 0%, #dcd0f1 100%);}
+    50% {background-image: linear-gradient(to top, #eae5f7 0%, #d87e98 100%);}
+    to {background-image: linear-gradient(120deg, #3ac285 0%, #ded891 100%);}
+}
+table {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    font-size: 14px;
+    border-collapse: collapse;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+table:nth-child(even){
+    animation: 7s linear infinite motion_even;
+    animation-delay: 0s;
+}
+
+table:nth-child(odd) {
+    animation: 10s linear infinite motion_odd;
+    animation-delay: 0s;
+}
+table:first-child {
+    margin-top: 50px;
+}
+caption {
+    background-color: brown;
+    color: white;
+    font-weight: bold;
+}
+th, td:first-child {
+    background: #ece1f6;
+    color: white;
+    padding: 10px 20px;
+}
+th, td {
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    border-color: white;
+}
+td {
+    background: #D8E6F3;
+}
+th:first-child, td:first-child {
+    text-align: left;
+}
+
+@keyframes motion_even {
+    from {transform: translate(0px); }
+    25% {transform: translate(-40%); transform: translateY(20%);}
+    50% {transform: translate(0px); transform: translateY(-20%);} 
+    75% {transform: translate(40%);) transform: translateY(40%);}
+    to {transform: translate(0px);}
+}
+
+@keyframes motion_odd {
+    from {transform: translate(0%);}
+    25% {transform: translate(40%); transform: translateY(-20%);}
+    50% {transform: translate(0%); transform: translateY(40%);}
+    75% {transform: translate(-40%);) transform: translateY(-20%);}
+    to {transform: translate(0%);}
+}
